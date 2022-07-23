@@ -1,0 +1,324 @@
+#import
+import sys
+import time
+
+#1 by 1
+def printy(text, delay=0.05):
+    for c in text:
+        sys.stdout.write(c)
+        sys.stdout.flush()
+        time.sleep(delay)
+    print()
+
+printy("Before we start, please choose your language")
+time.sleep(1)
+printy("Enter the number beside the language you want")
+time.sleep(1)
+language=int(input("[1] English [2] 简体中文 [3] #繁體中文  :"))
+
+
+
+#English
+if language==1:
+ printy("Hello! Welcome to Pigeons calculator")
+ time.sleep(1)
+ printy(" You can calculate 4 types of method")
+ time.sleep(1)
+ printy("Please type the number of the method you want")
+ time.sleep(1)
+ x = int(input("[1] Addition [2] Subtraction [3] Multiplication   [4] Division :"))
+
+#Addition
+ if x == 1:
+  printy("Ok, so you want the Additon method")
+  time.sleep(1)
+  printy("Look carefully the format is like this")
+  time.sleep(1)
+  printy("“ a+b=c　“")
+  time.sleep(1)
+  a = int(input("What you want <a> to be? :"))
+  b = int(input("What you want <b> to be? :"))
+  printy("Calculating....")
+  time.sleep(2)
+  print("Aha! The answer is", a + b)
+  time.sleep(1)
+  r = input("Are you happy with the answer?(y/n) :")
+  if r == "y" or r == "Y":
+      print("I like playing with you ^0^. See you next time!")
+  elif r == "n" or r == "N":
+        print("You defeated me")
+  else:
+    print("What do you mean? Maybe you are bad of reading instruction... See you next time!")
+
+#Subtraction
+ elif x == 2:
+  printy("Ok, so you want the Subtraction method")
+  time.sleep(1)
+  printy("Look carefully the format is like this")
+  time.sleep(1)
+  printy("“ a-b=c　“")
+  time.sleep(1)
+  a = int(input("What you want <a> to be? :"))
+  b = int(input("What you want <b> to be? :"))
+  printy("Calculating....")
+  time.sleep(2)
+  print("Aha! The answer is", a - b)
+  r = input("Are you happy with the answer?(y/n) :")
+  if r == "y" or r == "Y":
+      print("I like playing with you ^0^. See you next time!")
+  elif r == "n" or r == "N":
+      print("You defeated me")
+  else:
+    print("What do you mean? Maybe you are bad of reading instruction... See you next time!")
+
+#Multiplication
+ elif x == 3:
+  printy("Ok, so you want the Multiplication method")
+  time.sleep(1)
+  printy("Look carefully the format is like this")
+  time.sleep(1)
+  printy("“ a×b=c　“")
+  time.sleep(1)
+  a = int(input("What you want <a> to be? :"))
+  b = int(input("What you want <b> to be? :"))
+  printy("Calculating....")
+  time.sleep(2)
+  print("Aha! The answer is", a * b)
+  r = input("Are you happy with the answer?(y/n) :")
+  if r == "y" or r == "Y":
+   printy("I like playing with you ^0^. See you next time!")
+  elif r == "n" or r == "N":
+   printy("You defeated me")
+  else:
+   printy("What do you mean? Maybe you are bad of reading instruction... See you next time!" )
+
+#Division
+ elif x == 4:
+  printy("Ok, so you want the Division method")
+  time.sleep(1)
+  printy("Look carefully the format is like this")
+  time.sleep(1)
+  printy("“ a÷b=c　“")
+  time.sleep(1)
+  a = int(input("What you want <a> to be? :"))
+  b = int(input("What you want <b> to be? :"))
+  printy("Calculating....")
+  time.sleep(2)
+  try:
+    ans = a/b
+    print("Aha! The answer is", a / b)
+    r = input("Are you happy with the answer?(y/n) :")
+    if r == "y" or r == "Y":
+        printy("I like playing with you ^0^. See you next time!")
+    elif r == "n" or r == "N":
+        printy("You defeated me")
+    else:
+        printy("What do you mean? Maybe you are bad of reading instruction... See you next time!")
+  except:
+      printy("An error has been detected, pleasetry again")
+
+
+#Error
+ else:
+  printy("Hey! This is not a valid number!")
+  printy("Please try again")
+
+#简体中文
+elif language==2:
+  printy("您好！欢迎使用Mortis_666的计算器")
+  time.sleep(1)
+  print("您可以计算四种类型的方法")
+  time.sleep(1)
+  print("请输入您要的方法的编号")
+  time.sleep(1)
+  x = int(input("[1] 加法 [2] 减法 [3] 乘法 [4] 除法 :"))
+
+#加法
+  if x == 1:
+   printy("好的，您选择的是《加法》")
+   time.sleep(1)
+   printy("请看清楚，格式如下")
+   time.sleep(1)
+   printy("“ a+b=c　“")
+   time.sleep(1)
+   a = int(input("请输入<a>对应的号码 :"))
+   b = int(input("请输入<b>对应的号码 :"))
+   printy("计算中....")
+   time.sleep(2)
+   printy("啊哈! 答案是", a + b)
+   r = input("请问你对此答案满意吗？(y/n) :")
+   if r == "y" or r == "Y":
+      printy("和你玩真开心 ^0^。我们下次见!")
+   elif r == "n" or r == "N":
+        printy("你成功打败了我")
+   else:
+    printy("我好像搞不明白你在说什么，或许可能是你的理解能力有问题吧，我们下次见！")
+
+#减法
+  elif x == 2:
+   printy("好的，您选择的是《减法》")
+   time.sleep(1)
+   printy("请看清楚，格式如下")
+   time.sleep(1)
+   printy("“ a-b=c　“")
+   time.sleep(1)
+   a = int(input("请输入<a>对应的号码 :"))
+   b = int(input("请输入<b>对应的号码 :"))
+   printy("计算中....")
+   time.sleep(2)
+   print("啊哈! 答案是", a - b)
+   r = input("请问你对此答案满意吗？(y/n) :")
+   if r == "y" or r == "Y":
+      printy("和你玩真开心 ^0^。我们下次见!")
+   elif r == "n" or r == "N":
+        printy("你成功打败了我")
+   else:
+    printy("我好像搞不明白你在说什么，或许可能是你的理解能力有问题吧，我们下次见！")
+
+#乘法
+  elif x == 3:
+   printy("好的，您选择的是《乘法》")
+   time.sleep(1)
+   printy("请看清楚，格式如下")
+   time.sleep(1)
+   printy("“ a×b=c　“")
+   time.sleep(1)
+   a = int(input("请输入<a>对应的号码 :"))
+   b = int(input("请输入<b>对应的号码 :"))
+   printy("计算中....")
+   time.sleep(2)
+   print("啊哈! 答案是", a * b)
+   r = input("请问你对此答案满意吗？(y/n) :")
+   if r == "y" or r == "Y":
+      printy("和你玩真开心 ^0^。我们下次见!")
+   elif r == "n" or r == "N":
+        printy("你成功打败了我")
+   else:
+    printy("我好像搞不明白你在说什么，或许可能是你的理解能力有问题吧，我们下次见！")
+
+#除法
+  elif x == 4:
+   printy("好的，您选择的是《除法》")
+   time.sleep(1)
+   printy("请看清楚，格式如下")
+   time.sleep(1)
+   printy("“ a÷b=c　“")
+   time.sleep(1)
+   a = int(input("请输入<a>对应的号码 :"))
+   b = int(input("请输入<b>对应的号码 :"))
+   printy("计算中....")
+   time.sleep(2)
+   print("啊哈! 答案是", a / b)
+   r = input("请问你对此答案满意吗？(y/n) :")
+   if r == "y" or r == "Y":
+      printy("和你玩真开心 ^0^。我们下次见!")
+   elif r == "n" or r == "N":
+        printy("你成功打败了我")
+   else:
+    printy("我好像搞不明白你在说什么，或许可能是你的理解能力有问题吧，我们下次见！")
+  else:
+   printy("此算法不存在")
+
+#繁體中文
+elif language==3:
+  printy("您好！歡迎使用Mortis_666的計算器")
+  time.sleep(1)
+  printy("您可以計算四種類型的方法")
+  time.sleep(1)
+  printy("請輸入您要的方法的編號")
+  time.sleep(1)
+  x = int(input("[1] 加法 [2] 減法 [3] 乘法 [4] 除法 :"))
+
+#加法
+  if x == 1:
+   printy("好的，您選擇的是《加法》")
+   time.sleep(1)
+   printy("請看清楚，格式如下")
+   time.sleep(1)
+   printy("“ a+b=c　“")
+   time.sleep(1)
+   a = int(input("請輸入<a>對應的號碼 :"))
+   b = int(input("請輸入<b>對應的號碼 :"))
+   printy("計算中....")
+   time.sleep(2)
+   printy("啊哈! 答案是", a + b)
+   r = input("請問你對此答案滿意嗎？(y/n) :")
+   if r == "y" or r == "Y":
+      print("和你玩真開心 ^0^。我們下次見!")
+   elif r == "n" or r == "N":
+        printy("你成功打敗了我")
+   else:
+    printy("我好像搞不明白你在說什麼，或許可能是你的理解能力有問題吧，我們下次見！")
+
+#減法
+  elif x == 2:
+   printy("好的，您選擇的是《減法》")
+   time.sleep(1)
+   printy("請看清楚，格式如下")
+   time.sleep(1)
+   printy("“ a-b=c　“")
+   time.sleep(1)
+   a = int(input("請輸入<a>對應的號碼 :"))
+   b = int(input("請輸入<b>對應的號碼 :"))
+   printy("計算中....")
+   time.sleep(2)
+   print("啊哈! 答案是", a - b)
+   r = input("請問你對此答案滿意嗎？(y/n) :")
+   if r == "y" or r == "Y":
+      printy("和你玩真開心 ^0^。我們下次見!")
+   elif r == "n" or r == "N":
+        printy("你成功打敗了我")
+   else:
+    printy("我好像搞不明白你在說什麼，或許可能是你的理解能力有問題吧，我們下次見！")
+
+#乘法
+  elif x == 3:
+   printy("好的，您選擇的是《乘法》")
+   time.sleep(1)
+   printy("請看清楚，格式如下")
+   time.sleep(1)
+   printy("“ a×b=c　“")
+   time.sleep(1)
+   a = int(input("請輸入<a>對應的號碼 :"))
+   b = int(input("請輸入<b>對應的號碼 :"))
+   printy("計算中....")
+   time.sleep(2)
+   print("啊哈! 答案是", a * b)
+   r = input("請問你對此答案滿意嗎？(y/n) :")
+   if r == "y" or r == "Y":
+      printy("和你玩真開心 ^0^。我們下次見!")
+   elif r == "n" or r == "N":
+        printy("你成功打敗了我")
+   else:
+    printy("我好像搞不明白你在說什麼，或許可能是你的理解能力有問題吧，我們下次見！")
+
+#除法
+  elif x == 4:
+   printy("好的，您選擇的是《除法》")
+   time.sleep(1)
+   printy("請看清楚，格式如下")
+   time.sleep(1)
+   printy("“ a÷b=c　“")
+   time.sleep(1)
+   a = int(input("請輸入<a>對應的號碼 :"))
+   b = int(input("請輸入<b>對應的號碼 :"))
+   printy("計算中....")
+   time.sleep(2)
+   try:
+    ans = a/b
+    print("啊哈! 答案是", a / b)
+    r = input("請問你對此答案滿意嗎？(y/n) :")
+    if r == "y" or r == "Y":
+          printy("和你玩真開心 ^0^。我們下次見!")
+    elif r == "n" or r == "N":
+          printy("你成功打敗了我")
+    else:
+      printy("我好像搞不明白你在說什麼，或許可能是你的理解能力有問題吧，我們下次見！")
+   except:
+     printy("")
+  else:
+      printy("此算法不存在")
+ 
+  
+else:
+  printy("This language doesn't exist")
